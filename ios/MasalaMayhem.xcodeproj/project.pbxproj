@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB1000000000000000000007 /* MasalaMayhemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1000000000000000000001 /* MasalaMayhemApp.swift */; };
+		AB1000000000000000000008 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1000000000000000000002 /* ContentView.swift */; };
+		AB1000000000000000000009 /* GameWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1000000000000000000003 /* GameWebView.swift */; };
+		AB100000000000000000000A /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1000000000000000000004 /* AdManager.swift */; };
+		AB100000000000000000000B /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1000000000000000000005 /* BannerAdView.swift */; };
+		AB100000000000000000000C /* AdConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1000000000000000000006 /* AdConfig.swift */; };
+		AB100000000000000000000E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB100000000000000000000D /* Assets.xcassets */; };
+		AB1000000000000000000010 /* web in Resources */ = {isa = PBXBuildFile; fileRef = AB100000000000000000000F /* web */; };
+		AB1000000000000000000023 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = AB1000000000000000000022 /* GoogleMobileAds */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB1000000000000000000012 /* MasalaMayhem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasalaMayhem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB1000000000000000000001 /* MasalaMayhemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasalaMayhemApp.swift; sourceTree = "<group>"; };
+		AB1000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AB1000000000000000000003 /* GameWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWebView.swift; sourceTree = "<group>"; };
+		AB1000000000000000000004 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
+		AB1000000000000000000005 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		AB1000000000000000000006 /* AdConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdConfig.swift; sourceTree = "<group>"; };
+		AB100000000000000000000D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB100000000000000000000F /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
+		AB1000000000000000000011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB1000000000000000000017 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB1000000000000000000023 /* GoogleMobileAds in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB1000000000000000000013 = {
+			isa = PBXGroup;
+			children = (
+				AB1000000000000000000014 /* MasalaMayhem */,
+				AB1000000000000000000015 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB1000000000000000000015 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB1000000000000000000012 /* MasalaMayhem.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB1000000000000000000014 /* MasalaMayhem */ = {
+			isa = PBXGroup;
+			children = (
+				AB1000000000000000000001 /* MasalaMayhemApp.swift */,
+				AB1000000000000000000002 /* ContentView.swift */,
+				AB1000000000000000000003 /* GameWebView.swift */,
+				AB1000000000000000000004 /* AdManager.swift */,
+				AB1000000000000000000005 /* BannerAdView.swift */,
+				AB1000000000000000000006 /* AdConfig.swift */,
+				AB100000000000000000000F /* web */,
+				AB100000000000000000000D /* Assets.xcassets */,
+				AB1000000000000000000011 /* Info.plist */,
+			);
+			path = MasalaMayhem;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB1000000000000000000019 /* MasalaMayhem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB1000000000000000000020 /* Build configuration list for PBXNativeTarget "MasalaMayhem" */;
+			buildPhases = (
+				AB1000000000000000000016 /* Sources */,
+				AB1000000000000000000017 /* Frameworks */,
+				AB1000000000000000000018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MasalaMayhem;
+			packageProductDependencies = (
+				AB1000000000000000000022 /* GoogleMobileAds */,
+			);
+			productName = MasalaMayhem;
+			productReference = AB1000000000000000000012 /* MasalaMayhem.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB100000000000000000001A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				ORGANIZATIONNAME = "Ikshana Solutions LLC";
+				TargetAttributes = {
+					AB1000000000000000000019 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = AB100000000000000000001F /* Build configuration list for PBXProject "MasalaMayhem" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB1000000000000000000013;
+			packageReferences = (
+				AB1000000000000000000021 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
+			productRefGroup = AB1000000000000000000015 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB1000000000000000000019 /* MasalaMayhem */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB1000000000000000000018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB100000000000000000000E /* Assets.xcassets in Resources */,
+				AB1000000000000000000010 /* web in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB1000000000000000000016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB1000000000000000000007 /* MasalaMayhemApp.swift in Sources */,
+				AB1000000000000000000008 /* ContentView.swift in Sources */,
+				AB1000000000000000000009 /* GameWebView.swift in Sources */,
+				AB100000000000000000000A /* AdManager.swift in Sources */,
+				AB100000000000000000000B /* BannerAdView.swift in Sources */,
+				AB100000000000000000000C /* AdConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AB100000000000000000001B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				SDKROOT = iphoneos;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB100000000000000000001C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				SDKROOT = iphoneos;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB100000000000000000001D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MasalaMayhem/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Masala Mayhem";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ikshana.masalamayhem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AB100000000000000000001E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MasalaMayhem/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Masala Mayhem";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ikshana.masalamayhem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB100000000000000000001F /* Build configuration list for PBXProject "MasalaMayhem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB100000000000000000001B /* Debug */,
+				AB100000000000000000001C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB1000000000000000000020 /* Build configuration list for PBXNativeTarget "MasalaMayhem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB100000000000000000001D /* Debug */,
+				AB100000000000000000001E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB1000000000000000000021 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB1000000000000000000022 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB1000000000000000000021 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AB100000000000000000001A /* Project object */;
+}
