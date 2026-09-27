@@ -21,7 +21,7 @@ Consent: Google's UMP consent form (shown only where the law requires it, e.g. E
 The app ships with Google's **test** ads. Before submitting:
 1. In AdMob, add the iOS app and create Banner, Interstitial and Rewarded ad units.
 2. Paste the three ad unit IDs into `AdConfig.swift` and set `useTestAds = false`.
-3. Replace `GADApplicationIdentifier` in `Info.plist` with your AdMob **app** ID (contains `~`).
+3. (Done) Real IDs are in `AdConfig.swift` and `Info.plist`. Debug builds use test ads, Release builds use real ads.
 4. In AdMob → Privacy & messaging, create a GDPR message (and an IDFA explainer if you like).
 5. Add `app-ads.txt` to ikshana-solutions.com and list that site in App Store Connect.
 

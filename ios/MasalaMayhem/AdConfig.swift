@@ -2,19 +2,23 @@ import Foundation
 
 /// All AdMob settings in one place.
 ///
-/// While `useTestAds` is true the app shows Google's official TEST ads, which are safe to
-/// tap during development. Before you submit to the App Store:
-///   1. Create the app and three ad units in AdMob (Banner, Interstitial, Rewarded).
-///   2. Paste the ad unit IDs below.
-///   3. Put your AdMob APP ID (the one with a "~") in Info.plist → GADApplicationIdentifier.
-///   4. Set `useTestAds = false`.
+/// Debug builds (running from Xcode onto your phone) show Google's TEST ads, which are
+/// safe to tap. Release builds (Archive → TestFlight / App Store) show REAL ads.
+/// Never tap real ads on your own device — AdMob can suspend the account.
+///
+/// AdMob app ID (also in Info.plist → GADApplicationIdentifier):
+///   ca-app-pub-7991398343029209~8752428802
 enum AdConfig {
+    #if DEBUG
     static let useTestAds = true
+    #else
+    static let useTestAds = false
+    #endif
 
-    // ---- Your real ad unit IDs (from AdMob → Apps → Masala Mayhem → Ad units) ----
-    private static let realBanner       = "ca-app-pub-XXXXXXXXXXXXXXXX/BBBBBBBBBB"
-    private static let realInterstitial = "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII"
-    private static let realRewarded     = "ca-app-pub-XXXXXXXXXXXXXXXX/RRRRRRRRRR"
+    // ---- Real ad unit IDs (AdMob → Apps → Masala Mayhem → Ad units) ----
+    private static let realBanner       = "ca-app-pub-7991398343029209/3500102123"
+    private static let realInterstitial = "ca-app-pub-7991398343029209/3577881333"
+    private static let realRewarded     = "ca-app-pub-7991398343029209/8564726544"
 
     // ---- Google's public test IDs (do not change) ----
     private static let testBanner       = "ca-app-pub-3940256099942544/2934735716"
