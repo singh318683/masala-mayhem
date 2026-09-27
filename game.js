@@ -853,7 +853,7 @@ function scheduleHint() {
     if (!G || G.busy || G.over || G.booster) return;
     const m = findMove();
     if (m) m.forEach(k => { const t = G.cells[k].t; if (t && t.el) t.el.classList.add('hint'); });
-  }, 6000);
+  }, 4000);
 }
 function clearHint() {
   if (!G) return;
@@ -1219,6 +1219,20 @@ window.addEventListener('resize', () => {
     f.appendChild(d);
   });
 })();
+
+/* ---------- stop iOS Safari zooming (it ignores user-scalable=no) ---------- */
+['gesturestart', 'gesturechange', 'gestureend'].forEach(ev =>
+  document.addEventListener(ev, e => e.preventDefault(), { passive: false }));
+let lastTouchEnd = 0;
+document.addEventListener('touchend', e => {
+  const now = Date.now();
+  if (now - lastTouchEnd < 350 && !e.target.closest('a, button')) e.preventDefault();
+  lastTouchEnd = now;
+}, { passive: false });
+document.addEventListener('dblclick', e => e.preventDefault(), { passive: false });
+document.addEventListener('touchmove', e => {
+  if (e.touches.length > 1 || e.scale && e.scale !== 1) e.preventDefault();
+}, { passive: false });
 
 // debug hook for testing in the console
 window.__MM = {

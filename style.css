@@ -20,10 +20,13 @@ html, body {
   -webkit-tap-highlight-color: transparent;
   user-select: none; -webkit-user-select: none;
   overflow: hidden;
+  touch-action: manipulation;
+  -webkit-text-size-adjust: 100%; text-size-adjust: 100%;
 }
+* { touch-action: manipulation; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 #app { position: fixed; inset: 0; }
-.screen { position: absolute; inset: 0; display: none; flex-direction: column; }
+.screen { position: absolute; inset: 0; display: none; flex-direction: column; overflow: hidden; }
 .screen.active { display: flex; }
 .small { font-size: 12px; opacity: .75; letter-spacing: .04em; text-transform: uppercase; }
 .big { font-size: 20px; font-weight: 800; line-height: 1.1; }
@@ -205,9 +208,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .goal b { font-size: 18px; min-width: 18px; text-align: center; }
 .goal.done b { color: #7dff9e; }
 
-#boardWrap { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 4px; }
+#boardWrap { flex: 1; min-height: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 4px; }
 #board {
-  position: relative; touch-action: none;
+  position: relative; touch-action: none !important;
   filter: drop-shadow(0 10px 22px rgba(0,0,0,.45));
 }
 #cellLayer, #tileLayer, #overLayer, #fxLayer { position: absolute; inset: 0; }
@@ -246,7 +249,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .tile.sel svg { transform: scale(1.15); filter: drop-shadow(0 0 5px #fff) drop-shadow(0 2px 2px rgba(0,0,0,.4)); }
 .tile.wild svg { animation: spin 7s linear infinite; }
 .tile.tadka svg { animation: glow 1s ease-in-out infinite alternate; }
-.tile.hint svg { animation: wiggle .9s ease-in-out infinite; }
+.tile.hint { z-index: 2; }
+.tile.hint::before {
+  content: ''; position: absolute; inset: 4%; border-radius: 22%;
+  background: radial-gradient(circle, rgba(255, 236, 140, .75), rgba(255, 179, 0, .25) 60%, transparent 75%);
+  box-shadow: 0 0 0 2px rgba(255, 213, 79, .9);
+  animation: hintGlow 1s ease-in-out infinite;
+}
+.tile.hint svg { position: relative; animation: wiggle .9s ease-in-out infinite; }
+@keyframes hintGlow { 50% { opacity: .35; transform: scale(.92); } }
 .tile.born svg { animation: born .4s ease-out; }
 .tile.pop svg { animation: pop .28s ease-in forwards; }
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -299,7 +310,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 @keyframes floatUp { to { transform: translate(-50%, -160%); opacity: 0; } }
 .cheer {
   position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%);
-  font-size: clamp(34px, 10vw, 56px); font-weight: 800; white-space: nowrap;
+  font-size: clamp(28px, 8vw, 50px); font-weight: 800; white-space: nowrap;
   color: #ffe08a; text-shadow: 0 4px 0 #b3401a, 0 0 24px rgba(255,150,0,.7);
   animation: cheer 1.2s ease-out forwards; z-index: 5;
 }
