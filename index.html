@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Masala Mayhem</title>
+<meta name="description" content="A match-3 spice puzzle set on the ghats of Varanasi.">
+<meta name="theme-color" content="#1b1035">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- shared gradients used by tile art -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="tadkaGlow">
+      <stop offset="0%" stop-color="#fff3b0" stop-opacity=".95"/>
+      <stop offset="55%" stop-color="#ffb300" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#ff6d00" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="diyaGlow">
+      <stop offset="0%" stop-color="#fff6c2" stop-opacity=".95"/>
+      <stop offset="100%" stop-color="#ff9800" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
+
+<div id="app">
+
+  <!-- TITLE -->
+  <section id="screen-title" class="screen active">
+    <div class="sun"></div>
+    <div class="floaters" id="floaters"></div>
+    <div class="title-content">
+      <div class="kicker">Kitchen Expeditions · Region 1</div>
+      <h1 class="logo">Masala<br>Mayhem</h1>
+      <div class="subtitle">The Ghats of Varanasi</div>
+      <button class="btn primary big" id="btnPlay">Play</button>
+    </div>
+    <div class="skyline">
+      <div class="ghat-steps"></div>
+      <div class="ganga"></div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section id="screen-map" class="screen">
+    <header class="map-head">
+      <button class="icon-btn" id="btnMapHome" aria-label="Home">⌂</button>
+      <div class="map-title">
+        <div class="small">Region 1</div>
+        <div class="big">Varanasi</div>
+      </div>
+      <button class="chip" id="btnRecipe" hidden>🥛 Recipe</button>
+      <div class="chip stars-chip">★ <span id="mapStars">0</span></div>
+      <button class="icon-btn" id="btnMuteMap" aria-label="Sound">🔊</button>
+    </header>
+    <div class="map-scroll" id="mapScroll">
+      <div class="map-inner">
+        <div class="map-river"></div>
+        <div class="map-list" id="mapList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME -->
+  <section id="screen-game" class="screen">
+    <header class="hud">
+      <button class="icon-btn" id="btnBack" aria-label="Back to map">‹</button>
+      <div class="hud-level">
+        <div id="hudGhat" class="small">Assi Ghat</div>
+        <div id="hudTitle" class="big">Level 1</div>
+      </div>
+      <button class="icon-btn" id="btnMute" aria-label="Sound">🔊</button>
+      <div class="hud-moves" id="movesBox"><span id="hudMoves">20</span><small>moves</small></div>
+    </header>
+    <div class="hud2">
+      <div class="score-box">
+        <div class="small">Score</div>
+        <div id="hudScore" class="score">0</div>
+        <div class="starbar"><div id="starFill"></div><div id="starMarks"><i></i><i></i><i></i></div></div>
+      </div>
+      <div class="goals" id="goals"></div>
+    </div>
+    <div id="boardWrap">
+      <div id="board">
+        <div id="cellLayer"></div>
+        <div id="tileLayer"></div>
+        <div id="overLayer"></div>
+        <div id="fxLayer"></div>
+      </div>
+    </div>
+    <div class="boosters">
+      <button class="booster" data-b="pin" aria-label="Rolling Pin">
+        <svg viewBox="0 0 100 100"><g transform="rotate(-30 50 50)"><rect x="3" y="44" width="16" height="12" rx="6" fill="#8d5a2b"/><rect x="81" y="44" width="16" height="12" rx="6" fill="#8d5a2b"/><rect x="16" y="36" width="68" height="28" rx="14" fill="#d9a066" stroke="#6d4424" stroke-width="4"/></g></svg>
+        <span class="bname">Pin <span class="dir"></span></span><span class="count">0</span>
+      </button>
+      <button class="booster" data-b="whisk" aria-label="Whisk">
+        <svg viewBox="0 0 100 100"><path d="M50 58 L50 94" stroke="#8d5a2b" stroke-width="10" stroke-linecap="round"/><g fill="none" stroke="#cfd8dc" stroke-width="4"><path d="M50 60 C20 40 26 6 50 6 C74 6 80 40 50 60Z"/><path d="M50 60 C34 40 38 8 50 6 C62 8 66 40 50 60Z"/><path d="M50 60 L50 6"/></g></svg>
+        <span class="bname">Whisk</span><span class="count">0</span>
+      </button>
+      <button class="booster" data-b="saffron" aria-label="Saffron Drop">
+        <svg viewBox="0 0 100 100"><path d="M50 8 C66 34 80 50 80 66 A30 30 0 0 1 20 66 C20 50 34 34 50 8Z" fill="#ff8a1f" stroke="#b33c00" stroke-width="4"/><path d="M38 60 C36 72 44 80 54 80" stroke="#ffe0a0" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+        <span class="bname">Saffron</span><span class="count">0</span>
+      </button>
+    </div>
+  </section>
+</div>
+
+<div id="modal" class="modal hidden"><div class="modal-card" id="modalCard"></div></div>
+<div id="toast"></div>
+
+<script src="levels.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
