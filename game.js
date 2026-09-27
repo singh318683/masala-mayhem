@@ -847,14 +847,7 @@ function onTap(r, c) {
 }
 
 /* ---------- hints ---------- */
-function scheduleHint() {
-  clearHint();
-  G.hintTimer = setTimeout(() => {
-    if (!G || G.busy || G.over || G.booster) return;
-    const m = findMove();
-    if (m) m.forEach(k => { const t = G.cells[k].t; if (t && t.el) t.el.classList.add('hint'); });
-  }, 4000);
-}
+function scheduleHint() { /* auto-hints turned off */ }
 function clearHint() {
   if (!G) return;
   clearTimeout(G.hintTimer);
